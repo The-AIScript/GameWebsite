@@ -1,0 +1,52 @@
+<div class="hero-unit">
+  <h1>Happy Snake</h1>
+  <p>Snake is a casual video game that originated during the late 1970s in arcades and has maintained popularity since then, becoming something of a classic. After it became the standard pre-loaded game on Nokia mobile phones in 1998, Snake found a massive audience.</p>
+  <p>
+    <a href="/start" class="btn btn-primary btn-large">
+      Start the game!
+    </a>
+  </p>
+</div>
+<ul class="breadcrumb">
+  <li><a href="#">Game Center</a> <span class="divider">/</span></li>
+  <li class="active">Home</li>
+</ul>
+<div class="row">
+  <div class="span4">
+    <div ng-show="user.name" class="well">
+      <ul class="nav nav-list">
+        <li class="nav-header">My Scripts</li>
+        <li ng-repeat="code in myCodes">
+          <a href="/code/{{code.id}}">{{code.name}}</a>
+        </li>
+      </ul>
+    </div>
+    <div ng-hide="user.name" class="alert alert-block">
+      <h4>Sign in</h4>
+      Sign in to see your script.
+    </div>
+  </div>
+  <div class="span8">
+    <div class="page-header">
+      <h1>Game rank <small>Worldwide</small></h1>
+    </div>
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th>Rank</th>
+          <th>Player</th>
+          <th>AI Name</th>
+          <th>Score</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr ng-repeat="code in rankCodes">
+          <td>{{$index + 1}}</td>
+          <td>{{code.user.name}}</td>
+          <td>{{code.name}}</td>
+          <td>{{code.score}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

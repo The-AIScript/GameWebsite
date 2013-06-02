@@ -1,0 +1,23 @@
+<div class="navbar" ng-controller="NavCtrl">
+  <div class="navbar-inner">
+    <a class="brand" href="/">AI Script</a>
+    <ul class="nav">
+      <li ng-class="{active: page == 'home'}"><a href="/">Home</a></li>
+      <li ng-class="{active: page == 'game'}"><a href="/game">Game Center</a></li>
+      <li ng-show="user.role == 'admin'" ng-class="{active: page == 'admin'}"><a href="/dashboard">Dashboard</a></li>
+      <li ng-class="{active: page == 'about'}"><a href="/about">About</a></li>
+    </ul>
+    <ul class="nav pull-right">
+      <li ng-show="!user.name && !loadingUser"><a ng-href="https://github.com/login/oauth/authorize?client_id={{githubClientID}}&redirect_uri={{location.absUrl()}}">Sign In</a></li>
+      <li ng-show="!user.name && loadingUser"><a ng-href="#">Loading...</a></li>
+      <li ng-show="user.name" class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">{{user.name}}<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="/profile">Profile</a></li>
+          <li><a href="#" ng-click="logout()">Logout</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+

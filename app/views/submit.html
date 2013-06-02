@@ -1,0 +1,19 @@
+<form class="form-horizontal" ng-submit="submit()">
+  <div class="control-group">
+    <label class="control-label" for="inputName">Email</label>
+    <div class="controls">
+      <input type="text" ng-model="name" id="inputName" placeholder="Script Name" required>
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="textareaScript">Script</label>
+    <div class="controls">
+      <textarea ng-model="script" id="textareaScript" placeholder="Your awesome code here..." class="span8" rows="20" required></textarea>
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <button ng-disabled="btn!='Submit'" type="submit" ng-bind="btn" class="btn"></button>
+    </div>
+  </div>
+</form>
