@@ -28,4 +28,7 @@ angular.module('gradulateProductionServices', [])
       }
     };
   }])
+  .factory('Game', function () {
+    return {};
+  })
   .value('githubClientID', '431fb09dec02503995d9');

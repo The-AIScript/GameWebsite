@@ -7,6 +7,7 @@
 </p>
 </div>
 <button ng-click="start()">Start!</button>
+<p>Round: {{round}}</p>
 <div id="map" class="clearfix" ng-style="mapSize">
   <div ng-style="wall" class="map-wall" ng-repeat="wall in walls"></div>
   <div ng-style="food" class="map-food" ng-repeat="food in foods"></div>
