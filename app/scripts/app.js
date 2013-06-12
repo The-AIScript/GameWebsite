@@ -10,7 +10,7 @@ angular.module('gradulateProductionApp', ['gradulateProductionControllers', 'htt
         controller: 'MainCtrl'
       })
       .when('/game', {
-        title: 'Game Center',
+        title: 'Game',
         templateUrl: '/views/game.html',
         controller: 'GameCtrl'
       })
@@ -18,6 +18,11 @@ angular.module('gradulateProductionApp', ['gradulateProductionControllers', 'htt
         title: 'Start a new game',
         templateUrl: '/views/start.html',
         controller: 'StartCtrl'
+      })
+      .when('/about', {
+        title: 'About',
+        templateUrl: '/views/about.html',
+        controller: 'AboutCtrl'
       })
       .when('/dashboard', {
         title: 'Dashboard',
@@ -29,10 +34,10 @@ angular.module('gradulateProductionApp', ['gradulateProductionControllers', 'htt
         templateUrl: '/views/profile.html',
         controller: 'ProfileCtrl'
       })
-      .when('/about', {
-        title: 'About',
-        templateUrl: '/views/about.html',
-        controller: 'AboutCtrl'
+      .when('/document', {
+        title: 'Document',
+        templateUrl: '/views/document.html',
+        controller: 'DocumentCtrl'
       })
       .when('/submit', {
         title: 'Submit Code',

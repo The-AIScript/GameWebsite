@@ -1,18 +1,23 @@
 <h2>Select Game Players:</h2>
 <div class="clearfix">
-<p class="start-choose-codes" ng-repeat="code in codes">
-  <label class="checkbox">
-    <input type="checkbox" ng-model="code.checked"/> {{code.name}}
-  </label>
-</p>
-</div>
+  <div class="start-choose-codes" ng-repeat="code in codes" ng-click="click(code)">
+    <input type="checkbox" ng-model="code.checked"/>
+    <p class="name">{{code.name}}</p>
+    <p>作者: {{code.user.name}}</p>
+    <p>排名: {{$index + 1}}</p>
+  </div>
+  </div>
 <button ng-click="start()">Start!</button>
-<p>Round: {{round}}</p>
-<div id="map" class="clearfix" ng-style="mapSize">
-  <div ng-style="wall" class="map-wall" ng-repeat="wall in walls"></div>
-  <div ng-style="food" class="map-food" ng-repeat="food in foods"></div>
-  <div ng-style="head" class="map-head" ng-repeat="head in heads"></div>
-  <div ng-style="body" class="map-body" ng-repeat="body in bodys"></div>
-  <div ng-style="corner" class="map-corner" ng-repeat="corner in corners"></div>
-  <div ng-style="tail" class="map-tail" ng-repeat="tail in tails"></div>
+<div id="mapWrapper">
+  <div id="mapData">
+    <p class="round">{{round}}</p>
+  </div>
+  <div id="map" class="clearfix" ng-style="mapSize">
+    <div ng-style="wall" class="map-wall" ng-repeat="wall in walls"></div>
+    <div ng-style="food" class="map-food" ng-repeat="food in foods"></div>
+    <div ng-style="head" class="map-head" ng-repeat="head in heads"></div>
+    <div ng-style="body" class="map-body" ng-repeat="body in bodys"></div>
+    <div ng-style="corner" class="map-corner" ng-repeat="corner in corners"></div>
+    <div ng-style="tail" class="map-tail" ng-repeat="tail in tails"></div>
+  </div>
 </div>

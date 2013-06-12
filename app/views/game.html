@@ -3,14 +3,13 @@
   <p>Snake is a casual video game that originated during the late 1970s in arcades and has maintained popularity since then, becoming something of a classic. After it became the standard pre-loaded game on Nokia mobile phones in 1998, Snake found a massive audience.</p>
   <p>
     <a href="/start" class="btn btn-primary btn-large">
-      Start the game!
+      Try the game!
+    </a>
+    <a href="/document" class="btn btn-large">
+      Read Documents
     </a>
   </p>
 </div>
-<ul class="breadcrumb">
-  <li><a href="#">Game Center</a> <span class="divider">/</span></li>
-  <li class="active">Home</li>
-</ul>
 <div class="row">
   <div class="span4">
     <div ng-show="user.name" class="well">
@@ -21,6 +20,7 @@
         </li>
       </ul>
     </div>
+    <a ng-show="user.name" href="/submit" class="btn btn-large btn-block btn-primary" type="button">Submit Code</a>
     <div ng-hide="user.name" class="alert alert-block">
       <h4>Sign in</h4>
       Sign in to see your script.
@@ -28,7 +28,7 @@
   </div>
   <div class="span8">
     <div class="page-header">
-      <h1>Game rank <small>Worldwide</small></h1>
+      <h1>Game rank<small class="pull-right"><a href="/about">Rank Rules</a></small></h1>
     </div>
     <table class="table table-striped">
       <thead>

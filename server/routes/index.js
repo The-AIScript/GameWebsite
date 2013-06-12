@@ -94,7 +94,6 @@ exports.getCodes = function (req, res) {
 };
 
 exports.newCode = function (req, res) {
-  console.log(req.body);
   var code = new Code({
     name: req.body.name,
     userId: req.body.userId,
